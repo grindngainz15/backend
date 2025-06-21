@@ -10,6 +10,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req,res)=>{
+  res.send("Started Dumbo")
+})
+
 app.use('/api/auth', require('./routes/auth.js'));
 app.use('/api/events', require('./routes/event.js'));
 
